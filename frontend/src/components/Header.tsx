@@ -273,10 +273,10 @@ const Header = () => {
             {user ? (
               // ✅ Logged In - Show User Greeting + Current Role + Switch Role + Logout
               <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2 text-gray-600">
+                <div className="flex items-center gap-2 text-gray-600" style={{ cursor: 'pointer' }} onClick={() => navigate('/role-selection')}>
                   {currentRole === 'editorInChief' && <Crown size={16} className="text-red-600" />}
                   <User size={18} />
-                  <span>Hi, {user.firstName}</span>
+                  <span>{user.firstName}</span>
                   {currentRole && (
                     <span className={`text-xs px-2 py-1 rounded border ${roleInfo.color}`}>
                       {roleInfo.label}
