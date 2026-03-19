@@ -133,25 +133,25 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900 text-gray-300 mt-16 border-t border-gray-700">
 
       {/* Top Info */}
-      <div className="max-w-6xl mx-auto px-6 py-8 grid md:grid-cols-2 gap-6 text-sm">
-        <div>
+      <div className="max-w-6xl mx-auto px-6 py-8 grid md:grid-cols-1 gap-6 text-sm">
+        {/* <div>
           <p><span className="font-semibold text-white">Online ISSN:</span> 2542-6605</p>
           <p><span className="font-semibold text-white">Print ISSN:</span> 2543-1536</p>
-        </div>
+        </div> */}
 
         <div>
           <p>
-            This journal platform provides access to peer-reviewed research and academic content in the domain of Cyber Physical Human Systems and IoT.
+            All content on this site: Copyright © 2026 Elsevier B.V., its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply.
           </p>
         </div>
       </div>
 
       {/* Links */}
-      <div className="max-w-6xl mx-auto px-6 py-8 border-t border-gray-700 grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* <div className="max-w-6xl mx-auto px-6 py-8 border-t border-gray-700 grid grid-cols-1 md:grid-cols-3 gap-8">
         <FooterLinkColumn title="For Authors" links={footerLinks.authors} />
         <FooterLinkColumn title="For Editors" links={footerLinks.editors} />
         <FooterLinkColumn title="For Reviewers" links={footerLinks.reviewers} />
-      </div>
+      </div> */}
 
       {/* Bottom Section */}
       <div className="border-t border-gray-700 px-6 py-6 max-w-6xl mx-auto text-xs">
@@ -160,9 +160,9 @@ const Footer: React.FC = () => {
 
           <div className="flex flex-wrap gap-4 text-gray-400">
             <a href="#" className="hover:text-white">About Portal</a>
-            <a href="#" className="hover:text-white">Contact</a>
-            <a href="#" className="hover:text-white">Terms & Conditions</a>
-            <a href="#" className="hover:text-white">Privacy Policy</a>
+            {/* <a href="#" className="hover:text-white">Contact</a> */}
+            {/* <a href="#" className="hover:text-white">Terms & Conditions</a> */}
+            {/* <a href="#" className="hover:text-white">Privacy Policy</a> */}
           </div>
 
           <div className="text-gray-500">
