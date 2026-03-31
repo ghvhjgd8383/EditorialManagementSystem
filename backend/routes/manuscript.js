@@ -7,6 +7,10 @@ const {
   downloadManuscript,
   downloadAcceptedManuscript,
   getAcceptedManuscripts,
+  getPublishedManuscripts,
+  downloadPublishedManuscript,
+  getMostDownloadedPublishedManuscript,
+  getLatestPublishedManuscript,
   submitRevision
 } = require('../controllers/manuscriptController');
 
@@ -19,8 +23,10 @@ const router = express.Router();
 
 router.get('/accepted', getAcceptedManuscripts);
 router.get('/accepted/:id/download', downloadAcceptedManuscript);
-router.get('/published', require('../controllers/manuscriptController').getPublishedManuscripts);
-router.get('/published/:id/download', require('../controllers/manuscriptController').downloadPublishedManuscript);
+router.get('/published', getPublishedManuscripts);
+router.get('/published/most-downloaded', getMostDownloadedPublishedManuscript);
+router.get('/published/latest', getLatestPublishedManuscript);
+router.get('/published/:id/download', downloadPublishedManuscript);
 
 router.post('/submit', 
   [

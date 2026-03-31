@@ -106,6 +106,11 @@ const manuscriptSchema = new mongoose.Schema({
     status: String,
     metadata: Object
   }],
+  downloadCount: {
+    type: Number,
+    default: 0,
+    min: 0
+  },
   publishedAt: Date
 }, {
   timestamps: true
@@ -113,5 +118,9 @@ const manuscriptSchema = new mongoose.Schema({
 
 manuscriptSchema.index({ status: 1, domain: 1 });
 manuscriptSchema.index({ correspondingAuthor: 1 });
+manuscriptSchema.index({ workflowStatus: 1, publishedAt: -1 });
+manuscriptSchema.index({ status: 1, publishedAt: -1 });
+manuscriptSchema.index({ workflowStatus: 1, downloadCount: -1 });
+manuscriptSchema.index({ status: 1, downloadCount: -1 });
 
 module.exports = mongoose.model('Manuscript', manuscriptSchema);
