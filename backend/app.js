@@ -31,7 +31,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: 'https://golden-semifreddo-2fdfeb.netlify.app' || 'http://localhost:5173',
   credentials: true
 }));
 
