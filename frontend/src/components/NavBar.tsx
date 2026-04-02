@@ -189,7 +189,7 @@ const NavBar: React.FC = () => {
                 {/* Email verification via Google for ORCID-only accounts */}
                 {linkedProviders.includes('orcid') && !linkedProviders.includes('google') && !profile.emailVerified && (
                   <button
-                    onClick={() => { window.location.href = 'http://localhost:3000/api/auth/google'; }}
+                    onClick={() => { window.location.href = 'https://editorialmanagementsystem.onrender.com/api/auth/google'; }}
                     className="inline-flex items-center py-1 px-3 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-100"
                   >
                     Verify email with Google

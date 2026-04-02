@@ -53,7 +53,7 @@ const AuthorDashboard = () => {
 
   const fetchReviewsForManuscript = async (manuscriptId: string) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/reviews/manuscript/${manuscriptId}`, {
+      const response = await fetch(`https://editorialmanagementsystem.onrender.com/api/reviews/manuscript/${manuscriptId}`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }

@@ -32,7 +32,7 @@ const EditorReviewHistory = () => {
   const fetchAllManuscriptsWithReviews = async () => {
     try {
       // Fetch from admin pending manuscripts endpoint first (requires editor/admin role)
-      const resp = await fetch('http://localhost:3000/api/admin/pending-manuscripts', {
+      const resp = await fetch('https://editorialmanagementsystem.onrender.com/api/admin/pending-manuscripts', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -46,7 +46,7 @@ const EditorReviewHistory = () => {
           pendingMs.map(async (m: any) => {
             try {
               const reviewResp = await fetch(
-                `http://localhost:3000/api/reviews/manuscript/${m.id || m._id}`,
+                `https://editorialmanagementsystem.onrender.com/api/reviews/manuscript/${m.id || m._id}`,
                 {
                   headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`
