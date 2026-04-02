@@ -5,7 +5,8 @@ const cors = require('cors');
 require('events').EventEmitter.defaultMaxListeners = 15;
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  // origin: 'http://localhost:5173',
+  origin: ['http://localhost:5173','https://golden-semifreddo-2fdfeb.netlify.app'],
   credentials: true 
 }));
 
